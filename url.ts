@@ -23,7 +23,7 @@ export function isURL(str?: string | null): boolean {
   return urlRegex.test(str);
 }
 
-export const hasProtocol = (url: string) => {
+export const hasProtocol = (url: string): boolean => {
   return (
     url.startsWith("http:") ||
     url.startsWith("https:") ||
@@ -49,7 +49,7 @@ export const validateAndModifyUrl = (url: string): string | null => {
   return url;
 };
 
-export const removeHttp = (url: string) => {
+export const removeHttp = (url: string): string => {
   if (url === "") return url;
   try {
     return new URL(url).href.replace(/^(https?:|)\/\//, "");
@@ -62,7 +62,7 @@ export const urlEquals = (
   url: string | null = "",
   anotherUrl: string | null = "",
   ignoreProtocol = true
-) => {
+): boolean => {
   if (ignoreProtocol) {
     return removeHttp(url || "") === removeHttp(anotherUrl || "");
   } else {
@@ -80,7 +80,7 @@ export const urlEquals = (
   }
 };
 
-export const hasSameHost = (url: string, newUrl: string) => {
+export const hasSameHost = (url: string, newUrl: string): boolean => {
   try {
     return new URL(url).host === new URL(newUrl).host;
   } catch (e) {
@@ -88,7 +88,7 @@ export const hasSameHost = (url: string, newUrl: string) => {
   }
 };
 
-export const isSearchTerm = (url: string) => {
+export const isSearchTerm = (url: string): boolean => {
   try {
     if (url.trim().includes(" ")) {
       return true;
