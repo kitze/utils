@@ -8,7 +8,10 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
+    "@radix-ui/react-tooltip": "^1.1.7",
+    "is-url": "^1.2.4",
     "react": "^19.0.0",
-    "react-twc": "^1.4.2"
+    "react-twc": "^1.4.2",
+    "tailwind-merge": "^2.6.0"
   }
 }
