@@ -3,11 +3,10 @@ export * as url from "./utils/url.ts";
 export * as sizzy from "./utils/sizzy.ts";
 export * as responsive from "./utils/responsive.ts";
 
-export * from "./components";
-
-//direct
+//direcjt
 export * from "./hooks";
 export * from "./fns";
 export * from "./utils/types.ts";
+
 //react components
 export * as twc from "./twc.ts";
