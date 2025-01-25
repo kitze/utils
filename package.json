@@ -11,6 +11,7 @@
   "scripts": {
     "build": "tsup index.ts --format esm --dts",
     "rebuild": "nr clean && nr build",
+    "reinstall": "rm -rf node_modules && ni",
     "clean": "rm -rf dist",
     "dev": "tsup index.ts --format esm --dts --watch",
     "bump": "npm version patch && npm publish",
@@ -21,13 +22,8 @@
   "license": "MIT",
   "description": "",
   "peerDependencies": {
-    "react": ">=18",
-    "tailwind-merge": "^2.6.0",
-    "clsx": "^2.1.1",
-    "react-twc": "^1.4.2",
-    "@radix-ui/react-tooltip": "^1.1.7",
     "is-url": "^1.2.4",
-    "tailwindcss": "^4.0.0"
+    "react": ">=18"
   },
   "dependencies": {
     "@types/is-url": "^1.2.32",
@@ -35,8 +31,7 @@
     "typescript": "^5.7.3"
   },
   "devDependencies": {
-    "tsup": "^8.3.5",
-    "@vitejs/create-vite": "^5.0.0"
+    "tsup": "^8.3.5"
   },
   "publishConfig": {
     "access": "public"
