@@ -1,13 +1,13 @@
-export * as text from "./text.ts";
-export * as url from "./url.ts";
+export * as text from "./utils/text.ts";
+export * as url from "./utils/url.ts";
+export * as sizzy from "./utils/sizzy.ts";
+export * as responsive from "./utils/responsive.ts";
 
+export * from "./components";
+
+//direct
+export * from "./hooks";
+export * from "./fns";
+export * from "./utils/types.ts";
 //react components
 export * as twc from "./twc.ts";
-
-//types
-export * from "./types.ts";
-
-//fns
-export * from "./fns/cn.ts";
-export * from "./fns/hash.ts";
-export * from "./fns/platform.ts";

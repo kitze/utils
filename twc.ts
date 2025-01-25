@@ -1,5 +1,5 @@
 import { twc } from "react-twc";
-import { ReactFC } from "./types";
+import { ReactFC } from "./utils/types";
 
 type TWCProps = { className?: string };
 

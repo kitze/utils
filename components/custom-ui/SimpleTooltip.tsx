@@ -3,10 +3,10 @@ import {
   TooltipRoot,
   TooltipTrigger,
   TooltipContent,
-} from "./ui/Tooltip";
+} from "../ui/Tooltip";
 import { TooltipPortal } from "@radix-ui/react-tooltip";
 import React from "react";
-import { cn } from "../fns/cn";
+import { cn } from "../../fns/cn";
 
 interface SimpleTooltipProps {
   children: React.ReactNode;
