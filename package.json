@@ -12,8 +12,9 @@
     "build": "tsup index.ts --format esm --dts",
     "rebuild": "nr clean && nr build",
     "clean": "rm -rf dist",
-    "dev": "tsup --watch",
-    "bump": "npm version patch && npm publish"
+    "dev": "tsup index.ts --format esm --dts --watch",
+    "bump": "npm version patch && npm publish",
+    "preview": "cd preview && npm run dev"
   },
   "keywords": [],
   "author": "",
@@ -34,7 +35,8 @@
     "typescript": "^5.7.3"
   },
   "devDependencies": {
-    "tsup": "^8.3.5"
+    "tsup": "^8.3.5",
+    "@vitejs/create-vite": "^5.0.0"
   },
   "publishConfig": {
     "access": "public"
