@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 type Options = {
   enabled?: boolean;
@@ -17,9 +17,9 @@ export const useMeasureElement = (options: Options = {}): MeasureResult => {
 
   useEffect(() => {
     if (enabled && ref?.current) {
-      let measure = () => {
+      const measure = () => {
         if (ref.current) {
-          const { offsetWidth, offsetHeight } = ref.current as any;
+          const { offsetWidth, offsetHeight } = ref.current;
 
           setSize({
             width: offsetWidth,
@@ -32,7 +32,7 @@ export const useMeasureElement = (options: Options = {}): MeasureResult => {
       window.addEventListener("resize", measure);
       return () => window.removeEventListener("resize", measure);
     }
-  }, []);
+  }, [enabled]);
 
-  return [ref, size];
+  return [ref as any, size];
 };
