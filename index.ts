@@ -7,6 +7,3 @@ export * as responsive from "./utils/responsive";
 export * from "./hooks";
 export * from "./fns";
 export * from "./utils/types";
-
-//react components
-export * as twc from "./twc";
