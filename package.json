@@ -13,7 +13,7 @@
     "rebuild": "nr clean && nr build",
     "clean": "rm -rf dist",
     "dev": "tsup --watch",
-    "bump": "yolo && npm version patch && npm publish"
+    "bump": "npm version patch && npm publish"
   },
   "keywords": [],
   "author": "",
