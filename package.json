@@ -2,22 +2,18 @@
   "name": "@kitze/utils",
   "version": "0.3.1",
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    }
-  },
   "files": [
     "dist"
   ],
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup",
+    "build": "tsup index.ts --format esm --dts",
+    "rebuild": "nr clean && nr build",
+    "clean": "rm -rf dist",
     "dev": "tsup --watch",
-    "prepublishOnly": "pnpm build"
+    "bump": "yolo && npm version patch && npm publish"
   },
   "keywords": [],
   "author": "",
@@ -39,5 +35,8 @@
   },
   "devDependencies": {
     "tsup": "^8.3.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
