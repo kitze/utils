@@ -15,12 +15,12 @@ interface SimpleTooltipProps {
   tooltipClassName?: string;
 }
 
-export const SimpleTooltip = ({
+export const SimpleTooltip: React.FC<SimpleTooltipProps> = ({
   children,
   content,
   className,
   tooltipClassName,
-}: SimpleTooltipProps) => {
+}): JSX.Element => {
   if (!content) {
     return children;
   }

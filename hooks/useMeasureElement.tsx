@@ -4,7 +4,12 @@ type Options = {
   enabled?: boolean;
 };
 
-export const useMeasureElement = (options: Options = {}) => {
+type MeasureResult = [
+  React.RefObject<HTMLDivElement>,
+  { width: number; height: number }
+];
+
+export const useMeasureElement = (options: Options = {}): MeasureResult => {
   const { enabled = true } = options;
 
   const ref = useRef<HTMLDivElement>(null);
