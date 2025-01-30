@@ -1,6 +1,6 @@
 {
   "name": "@kitze/utils",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -9,11 +9,11 @@
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup index.ts --format esm --dts",
+    "build": "tsup",
     "rebuild": "nr clean && nr build",
     "reinstall": "rm -rf node_modules && ni",
     "clean": "rm -rf dist",
-    "dev": "tsup index.ts --format esm --dts --watch",
+    "dev": "tsup --watch",
     "bump": "npm version patch && npm publish",
     "preview": "cd preview && npm run dev"
   },
@@ -22,7 +22,6 @@
   "license": "MIT",
   "description": "",
   "peerDependencies": {
-    "is-url": "^1.2.4",
     "react": ">=18"
   },
   "dependencies": {
@@ -31,6 +30,7 @@
     "typescript": "^5.7.3"
   },
   "devDependencies": {
+    "is-url": "^1.2.4",
     "tsup": "^8.3.5"
   },
   "publishConfig": {

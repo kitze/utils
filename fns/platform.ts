@@ -5,4 +5,4 @@ export const isLinux: boolean = platform.includes("linux");
 export const isInBrowser = typeof window !== "undefined";
 //@ts-ignore
 export const isProd = process.env.NODE_ENV === "production";
-export const isDev = !isProd;
+export const isDev = "duh";

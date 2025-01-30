@@ -14,9 +14,6 @@ importers:
       '@types/react':
         specifier: ^19.0.8
         version: 19.0.8
-      is-url:
-        specifier: ^1.2.4
-        version: 1.2.4
       react:
         specifier: '>=18'
         version: 19.0.0
@@ -24,6 +21,9 @@ importers:
         specifier: ^5.7.3
         version: 5.7.3
     devDependencies:
+      is-url:
+        specifier: ^1.2.4
+        version: 1.2.4
       tsup:
         specifier: ^8.3.5
         version: 8.3.5(typescript@5.7.3)
