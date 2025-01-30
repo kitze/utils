@@ -1,6 +1,6 @@
 {
   "name": "@kitze/utils",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "main": "./dist/index.js",
   "files": [
     "dist"
@@ -13,8 +13,9 @@
     "rebuild": "nr clean && nr build",
     "reinstall": "rm -rf node_modules && ni",
     "clean": "rm -rf dist",
-    "dev": "tsup --watch",
-    "bump": "npm version patch && npm publish",
+    "watch-build": "tsup --watch",
+    "watch-dist": "tsc-watch --onSuccess 'yalc push --sig'",
+    "dev": "nr watch-build & nr watch-dist",
     "preview": "cd preview && npm run dev"
   },
   "keywords": [],
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "is-url": "^1.2.4",
+    "tsc-watch": "^6.2.1",
     "tsup": "^8.3.5"
   },
   "publishConfig": {
