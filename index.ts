@@ -1,9 +1,9 @@
-export * as text from "./utils/text";
-export * as url from "./utils/url";
-export * as sizzy from "./utils/sizzy";
-export * as responsive from "./utils/responsive";
+export * as text from "./src/utils/text";
+export * as url from "./src/utils/url";
+export * as sizzy from "./src/utils/sizzy";
+export * as responsive from "./src/utils/responsive";
 
 //direct exports
-export * from "./hooks";
-export * from "./fns";
-export * from "./utils/types";
+export * from "./src/hooks";
+export * from "./src/fns";
+export * from "./src/utils/types";
